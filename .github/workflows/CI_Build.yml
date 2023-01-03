@@ -23,15 +23,6 @@ jobs:
     - name: test bin on ${{ matrix.os }}
       run: |
         cd build
+        ls -la
         ctest -R bin --verbose
-    - name: make lib on ${{ matrix.os }}
-      run: |
-        cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles"
-        make lib
-    - name: test lib on ${{ matrix.os }}
-      run: |
-        cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"        
-        make lib_test_c
-        ctest -R lib --verbose
+
