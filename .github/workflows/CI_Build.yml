@@ -2,16 +2,16 @@ name: CI_Build
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, dev ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ "windows-latest", "ubuntu-latest", "macos-latest" ]
+        os: [ "windows-latest", "ubuntu-latest" ]
     steps:
     - uses: actions/checkout@v2
     - name: make bin on ${{ matrix.os }}
