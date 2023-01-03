@@ -14,8 +14,10 @@ jobs:
         os: [ "windows-latest" ]
     steps:
     - uses: actions/checkout@v3
+    - uses: ilammy/msvc-dev-cmd@v1
     - name: make bin on ${{ matrix.os }}
       run: |
+        msvc --version
         c++ --version
         # choco install mingw --version=12.2.0
         mkdir build 
