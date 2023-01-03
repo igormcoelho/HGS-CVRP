@@ -1,5 +1,7 @@
 
-[![CI_Build](https://github.com/vidalt/HGS-CVRP/actions/workflows/CI_Build.yml/badge.svg)](https://github.com/vidalt/HGS-CVRP/actions/workflows/CI_Build.yml)
+IMPORTANT: Fork from original project! Do NOT contribute here.
+
+[![CI_Build](https://github.com/igormcoelho/HGS-CVRP/actions/workflows/CI_Build.yml/badge.svg)](https://github.com/igormcoelho/HGS-CVRP/actions/workflows/CI_Build.yml)
 
 # HGS-CVRP: A modern implementation of the Hybrid Genetic Search for the CVRP
 
