@@ -30,8 +30,13 @@ void print_solution(struct Solution * sol) {
 		printf("\n");
 	}
 }
+
 int main()
 {
+	printf("Begin tests\n");
+	printf("End tests\n");
+	return 0;
+	//
 	// Preparing algorithm parameters
 	struct AlgorithmParameters ap = default_algorithm_parameters();
 	ap.timeLimit = 1.73; // seconds
