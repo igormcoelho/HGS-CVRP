@@ -22,10 +22,13 @@ jobs:
         # choco install mingw --version=12.2.0
         mkdir build 
         cd build
-        # cmake .. -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles"
-        cmake .. -DCMAKE_BUILD_TYPE=Release -G "NMake Makefiles" .
-        nmake bin
-        # make bin
+        if [ "$RUNNER_OS" == "Windows" ]; then
+          cmake .. -DCMAKE_BUILD_TYPE=Release -G "NMake Makefiles" .
+          nmake bin
+        else
+          cmake .. -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles"
+          make bin
+        fi
     - name: test bin on ${{ matrix.os }}
       run: |
         cd build
