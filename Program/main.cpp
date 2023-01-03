@@ -7,6 +7,9 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+	printf("main bin argc=%d\n", argc);
+	return 0;
+	//
 	try
 	{
 		// Reading the arguments of the program
