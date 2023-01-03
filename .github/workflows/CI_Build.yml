@@ -15,8 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make bin on ${{ matrix.os }}
-      run: | 
-        choco install mingw --version=12.2.0
+      run: |
+        msvc --version
+        # choco install mingw --version=12.2.0
         mkdir build 
         cd build
         cmake .. -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles"
