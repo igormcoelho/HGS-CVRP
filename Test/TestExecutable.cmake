@@ -6,7 +6,8 @@
 # solve the given instance
 execute_process(
         # COMMAND ./hgs ../Instances/CVRP/${INSTANCE}.vrp mySolution.sol -seed 1 -round ${ROUND}
-        COMMAND ls
+        # COMMAND ls
+        COMMAND ./hgs
         RESULTS_VARIABLE result
 )
 message(${result})
