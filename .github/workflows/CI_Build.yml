@@ -23,6 +23,6 @@ jobs:
     - name: test bin on ${{ matrix.os }}
       run: |
         cd build
-        ls -la
+        ls
         ctest -R bin --verbose
 
